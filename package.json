@@ -1,0 +1,16 @@
+{
+  "name": "flat-camel",
+  "version": "1.0.0",
+  "description": "flattener module",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "node",
+    "flattener",
+    "camel"
+  ],
+  "author": "Dial-Once",
+  "license": "ISC"
+}
