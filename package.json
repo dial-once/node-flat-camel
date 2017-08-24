@@ -13,9 +13,11 @@
   ],
   "author": "Dial-Once",
   "license": "ISC",
+  "dependencies": {
+    "flatten-obj": "^3.1.1"
+  },
   "devDependencies": {
     "eslint": "^4.4.1",
-    "flatten-obj": "^3.1.1",
     "mocha": "^3.5.0"
   }
 }
