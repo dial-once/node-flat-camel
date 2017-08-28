@@ -12,9 +12,8 @@ module.exports.camelCase = (obj) => {
   for (const key of Object.keys(flattenedObj)) {
     const value = flattenedObj[key];
     let camelCaseKey = '';
-    const HAD_DOT_REGEX = /\./gi;
-    // if key contains dot
-    if (HAD_DOT_REGEX.exec(key)) {
+    const HAS_DOT_REGEX = /\./gi;
+    if (HAS_DOT_REGEX.exec(key)) {
       for (let i = 0; i < key.length; i++) {
         // if dot
         if (key.charAt(i) === '.') {
