@@ -33,7 +33,7 @@ describe('flattener camelCase', () => {
       lolla: 'palooza'
     }];
     const flat = flattener.toCamelCase(testObject);
-    assert.deepEqual(flat, [{ helloPeopleHowAreYou: [ 'good'], lolla: 'palooza' }]);
+    assert.deepEqual(flat, [{ helloPeopleHowAreYou: ['good'], lolla: 'palooza' }]);
   });
 
   it('should flatten arrays to camel-case style [plain literals]', () => {
@@ -53,7 +53,7 @@ describe('flattener camelCase', () => {
     1,
     true];
     const flat = flattener.toCamelCase(testObject);
-    assert.deepEqual(flat, [{ helloPeopleHowAreYou: [ 'good'], lolla: 'palooza' }, 'hello', 1, true]);
+    assert.deepEqual(flat, [{ helloPeopleHowAreYou: ['good'], lolla: 'palooza' }, 'hello', 1, true]);
   });
 
   it('should not convert booleans', () => {

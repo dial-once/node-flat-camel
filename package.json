@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha test"
   },
+  "repository": "https://github.com/dial-once/node-flat-camel",
   "keywords": [
     "node",
     "flattener",
@@ -19,7 +20,10 @@
   "devDependencies": {
     "eslint": "^4.4.1",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
     "mocha": "^3.5.0"
   }
 }

@@ -17,21 +17,21 @@ module.exports.toCamelCase = (object) => {
 
   if (Array.isArray(object)) {
     result = [];
-    for (let i = 0; i < object.length; i ++) {
+    for (let i = 0; i < object.length; i++) {
       result[i] = module.exports.toCamelCase(object[i]);
     }
   } else {
     // this one converts an object to { key.innerkey: value } format
     const flattenedObj = flattener(object);
+    const CHAR_NEXT_TO_DOT = /\../gi;
     // replacing next char after dot (.) with the same but in UpperCase and removing dots
     for (const key of Object.keys(flattenedObj)) {
       let camelCaseKey = key;
-      const CHAR_NEXT_TO_DOT = /\../gi;
       const dots = key.match(CHAR_NEXT_TO_DOT);
       if (Array.isArray(dots)) {
         for (const dot of dots) {
           // get next char after dot, and put it in upperCase
-          camelCaseKey = camelCaseKey.replace(new RegExp(`\\${dot}`, 'g'), dot.charAt(1).toUpperCase());     
+          camelCaseKey = camelCaseKey.replace(new RegExp(`\\${dot}`, 'g'), dot.charAt(1).toUpperCase());
         }
       }
       result[camelCaseKey] = flattenedObj[key];
