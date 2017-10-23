@@ -1,15 +1,10 @@
-Dial-Once
+camelCase object flattener
 
-There is no environment to set up, this module is ready to use.
-It flattens object literal into camel case format.
+Flattens objects, arrays by converting it's keys into a camelCase format.
 
-A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces (sources: http://www.dyn-web.com/tutorials/object-literal/)
-
-There is only one function -> camelCase();
-
-Exammples:
-
-```
+Usage:
+```js
+// object
 const flattener = require('flat-camel');
 
 const objToFormat = {
@@ -21,15 +16,35 @@ const objToFormat = {
         }
       }
     }
-  },
-  lolla: 'palooza'
+  }
 };
 
-flattener.camelCase(objToFormat);
+flattener.toCamelCase(objToFormat);
 
-output: {
-  helloPeopleHowAreYou: 'good',
-  lolla: 'palooza'
-}
+// result
+{
+  helloPeopleHowAreYou: 'good'
+};
+
+
+// Array with plain literals
+const testObject = [{
+  hello: {
+    people: {
+      how: {
+        are: {
+          you: ['good']
+        }
+      }
+    }
+  }
+}, 'hello', 1, true];
+
+flattener.toCamelCase(testObject);
+
+// result
+[{
+  helloPeopleHowAreYou: ['good']
+}, 'hello', 1, true];
 ```
 
