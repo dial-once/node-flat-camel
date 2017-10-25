@@ -8,7 +8,7 @@ lint:
 
 test:
 	make lint
-	npm test
+	npm run cover
 
 sonar:
 	sed '/sonar.projectVersion/d' ./sonar-project.properties > tmp && mv tmp sonar-project.properties

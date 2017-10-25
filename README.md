@@ -1,13 +1,20 @@
+# node-flat-camel
 camelCase object flattener
 
 Flattens objects, arrays by converting it's keys into a camelCase format.
 
-Usage:
+## Installation
+```
+npm install flat-camel
+```
+
+## How it works:
+
+#### Object
 ```js
-// object
 const flattener = require('flat-camel');
 
-const objToFormat = {
+const objectToFormat = {
   hello: {
     people: {
       how: {
@@ -19,16 +26,19 @@ const objToFormat = {
   }
 };
 
-flattener.toCamelCase(objToFormat);
+flattener.toCamelCase(objectToFormat);
 
 // result
 {
   helloPeopleHowAreYou: 'good'
 };
+```
 
+#### Array
+```js
+const flattener = require('flat-camel');
 
-// Array with plain literals
-const testObject = [{
+const arrayToFormat = [{
   hello: {
     people: {
       how: {
@@ -40,7 +50,7 @@ const testObject = [{
   }
 }, 'hello', 1, true];
 
-flattener.toCamelCase(testObject);
+flattener.toCamelCase(arrayToFormat);
 
 // result
 [{
@@ -48,3 +58,12 @@ flattener.toCamelCase(testObject);
 }, 'hello', 1, true];
 ```
 
+## Tests
+Requirements:
+  - npm
+  - make
+
+Run `make deps` once and then `make test` to launch the test suite.
+
+## License
+The MIT License [MIT](LICENSE.md)
