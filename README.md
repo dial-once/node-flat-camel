@@ -1,4 +1,11 @@
 # node-flat-camel
+[![Sonar](http://proxy.dialonce.net/sonar/api/badges/gate?key=node-flat-camel)](http://sonar.dialonce.net/dashboard?id=node-flat-camel)
+[![Sonar](http://proxy.dialonce.net/sonar/api/badges/measure?key=node-flat-camel&metric=ncloc)](http://sonar.dialonce.net/dashboard?id=node-flat-camel)
+[![Sonar](http://proxy.dialonce.net/sonar/api/badges/measure?key=node-flat-camel&metric=coverage)](http://sonar.dialonce.net/dashboard?id=node-flat-camel)
+[![Sonar](http://proxy.dialonce.net/sonar/api/badges/measure?key=node-flat-camel&metric=code_smells)](http://proxy.dialonce.net/sonar/api/badges/measure?key=node-flat-camel&metric=coverage)
+[![Sonar](http://proxy.dialonce.net/sonar/api/badges/measure?key=node-flat-camel&metric=bugs)](http://sonar.dialonce.net/dashboard?id=node-flat-camel)
+[![Sonar](http://proxy.dialonce.net/sonar/api/badges/measure?key=node-flat-camel&metric=sqale_debt_ratio)](http://sonar.dialonce.net/dashboard?id=node-flat-camel)
+
 camelCase object flattener
 
 Flattens objects, arrays by converting it's keys into a camelCase format.
