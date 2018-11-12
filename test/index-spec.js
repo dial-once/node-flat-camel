@@ -1,5 +1,5 @@
-const flattener = require('../src/index.js');
 const assert = require('assert');
+const flattener = require('../src/index.js');
 
 describe('flattener camelCase', () => {
   it('should flatten object to camel-case style', () => {
@@ -77,6 +77,6 @@ describe('flattener camelCase', () => {
     result = flattener.toCamelCase(null);
     assert.equal(result, null);
     result = flattener.toCamelCase(NaN);
-    assert.equal(isNaN(result), true);
+    assert.equal(Number.isNaN(result), true);
   });
 });
